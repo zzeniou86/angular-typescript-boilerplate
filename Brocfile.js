@@ -1,7 +1,7 @@
 var pickFiles = require('broccoli-funnel')
 var mergeTrees = require('broccoli-merge-trees')
 var rollup = require('broccoli-rollup');
-var rollupConfig = require('./rollup.config.js')
+var rollupConfig = require('./configs/brocfile.rollup.js')
 var typescript = require('rollup-plugin-typescript')
 var compileSas = require('broccoli-sass');
 // var TSLint = require('broccoli-tslinter');

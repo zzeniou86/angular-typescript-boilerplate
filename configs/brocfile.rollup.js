@@ -1,6 +1,11 @@
-var vendorCssFiles = mergeTrees([
-  pickFiles(new UnwatchedDir('src'), { include: ['vendor2.scss']}),
-  pickFiles(new UnwatchedDir('node_modules/angular'), { include: ['angular-csp.css']}),
-  pickFiles(new UnwatchedDir('node_modules/angular-material'), { include: ['angular-material.css']}),
-])
-module.exports = new compileSas([vendorCssFiles], 'vendor2.scss', 'vendor.css')
+var typescript = require('rollup-plugin-typescript')
+
+module.exports = {
+  entry: 'main.ts',
+  plugins: [typescript()],
+  format: 'iife',
+  dest: 'app.js', // equivalent to --output
+  globals: {
+    angular: 'angular',
+  }
+}
