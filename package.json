@@ -7,7 +7,7 @@
     "build": "broccoli dist",
     "build:vendor": "rollup --config rollup.config.vendor.js",
     "watch": "broccoli-timepiece dist",
-    "serve": "concurrently --kill-others \"npm run watch\" \"live-server dist\"",
+    "serve": "concurrently --kill-others \"npm run watch\" \"lite-server -c configs/bs-config.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run serve"
   },
@@ -27,7 +27,7 @@
     "broccoli-tslinter": "^0.1.0",
     "broccoli-typescript-compiler": "^0.6.0",
     "concurrently": "^2.1.0",
-    "live-server": "^1.0.0",
+    "lite-server": "^2.2.0",
     "rollup": "^0.26.3",
     "rollup-plugin-commonjs": "^2.2.1",
     "rollup-plugin-includepaths": "^0.1.5",
