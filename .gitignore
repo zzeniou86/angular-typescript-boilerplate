@@ -1,0 +1,15 @@
+
+/dist
+/tmp
+/assets
+
+/node_modules
+
+/typings
+npm-debug.log
+
+/e2e/*.js
+/e2e/*.map
+
+.DS_Store
+Thumbs.db

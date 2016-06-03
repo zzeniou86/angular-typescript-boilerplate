@@ -1,0 +1,8 @@
+// @import "test";
+
+.ok {
+    background-color: black;
+    div {
+        font-style: darken($color: black, $amount: 0)
+    }
+}
