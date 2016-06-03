@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "ng-ts-bp",
   "version": "1.0.0",
-  "description": "myOrb Angular Client",
+  "description": "angular and typescript boilerplate",
   "main": "index.js",
   "scripts": {
     "build": "broccoli dist",
@@ -11,8 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run serve"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Zenon Zeniou",
+  "license": "MIT",
   "devDependencies": {
     "broccoli": "^0.16.9",
     "broccoli-cli": "^1.0.0",
