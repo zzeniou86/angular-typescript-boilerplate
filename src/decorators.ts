@@ -24,9 +24,6 @@ export function Component(config: ng.IComponentOptions & IComponentDef): ClassDe
         componentOptions.require = config.require;
         componentOptions.transclude = config.transclude;
         delete target.prototype.zz$$bindings;
-
-        target.$inject = ["$q"];
-
         angular.module(target.name, [])
             .component(dashToUppercase(config.selector), componentOptions);
         return target;
