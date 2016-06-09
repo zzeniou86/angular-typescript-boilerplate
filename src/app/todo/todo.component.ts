@@ -1,13 +1,24 @@
+import { Component, Input, Inject } from "../../decorators";
+
 interface Todos {
     text: string;
     done: boolean;
 }
 
-export class TodoListController {
+@Component({
+    selector: "todo-list",
+    templateUrl: "todo.template.html",
+})
+@Inject(["$q"])
+export class TodoComponent {
+    @Input()
+    hello:string;
     private todos:[Todos] = [
       {text:"learn angular", done: true},
       {text:"build an angular app", done: false}];
     private todoText:string;
+
+    constructor(private $q:ng.IQService) {};
 
     public addTodo():void {
       this.todos.push({text:this.todoText, done:false});
